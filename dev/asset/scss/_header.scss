@@ -1,0 +1,18 @@
+.header {
+    height: 95px;
+    background-color: #eee;
+    .inner {
+        display: flex;
+        max-width: 1440px;
+        margin: 0 20px;
+        h1 {
+            height: 95px;
+            background-color: #000;
+            a {}
+            svg {
+                height: 31px;
+            }
+        }
+        .gnb {}
+    }
+}

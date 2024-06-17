@@ -1,0 +1,37 @@
+@import 'base.css';
+@font-face {
+  font-family: "NotoSans-Light";
+  src: url("../fonts/NotoSansKR-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "NotoSans";
+  src: url("../fonts/NotoSansKR-Regular.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "NotoSans-Medium";
+  src: url("../fonts/NotoSansKR-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "NotoSans-Bold";
+  src: url("../fonts/NotoSansKR-Bold.ttf");
+  font-weight: 700;
+}
+.header {
+  height: 95px;
+  background-color: #eee;
+}
+.header .inner {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 20px;
+}
+.header .inner h1 {
+  height: 95px;
+  background-color: #000;
+}
+.header .inner h1 svg {
+  height: 31px;
+}

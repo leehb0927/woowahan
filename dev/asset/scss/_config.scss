@@ -1,0 +1,44 @@
+//fonts
+@font-face {
+    font-family: 'NotoSans-Light';
+    src: url('../fonts/NotoSansKR-Light.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'NotoSans';
+    src: url('../fonts/NotoSansKR-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'NotoSans-Medium';
+    src: url('../fonts/NotoSansKR-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'NotoSans-Bold';
+    src: url('../fonts/NotoSansKR-Bold.ttf');
+    font-weight: 700;
+}
+
+$font-light: 'NotoSans-Light';
+$font-regular: 'NotoSans';
+$font-medium: 'NotoSans-Medium';
+$font-bold: 'NotoSans-Bold';
+
+//flex
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-vertical {
+    display: flex;
+    align-items: center;
+}
+@mixin flex-horizontal {
+    display: flex;
+    justify-content: center;
+}
