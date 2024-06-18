@@ -48,22 +48,13 @@
                 }
             }
             .lang {
+                position: relative;
                 button {
                     position: relative;
                     width: 36px;
                     height: 36px;
                     font-family: $font-bold;
                     color: $color-gray;
-                    &:last-child {
-                        &::before {
-                            @include vs;
-                            top: 0;
-                            left: 0;
-                            width: 10px;
-                            height: 10px;
-                            color: #000;
-                        }
-                    }
                 }
             }
         }

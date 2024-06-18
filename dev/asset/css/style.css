@@ -75,20 +75,13 @@
   height: 8px;
   margin-left: 4px;
 }
+.header .inner .sub-gnb .lang {
+  position: relative;
+}
 .header .inner .sub-gnb .lang button {
   position: relative;
   width: 36px;
   height: 36px;
   font-family: "NotoSans-Bold";
   color: #d6d7da;
-}
-.header .inner .sub-gnb .lang button:last-child::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10px;
-  height: 10px;
-  color: #000;
 }
