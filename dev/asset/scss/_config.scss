@@ -42,3 +42,12 @@ $font-bold: 'NotoSans-Bold';
     display: flex;
     justify-content: center;
 }
+
+//color
+$color-gray: #d6d7da;
+
+@mixin vs {
+    content: '';
+    display: inline-block;
+    position: absolute;
+}

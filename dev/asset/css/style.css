@@ -20,17 +20,75 @@
   font-weight: 700;
 }
 .header {
+  position: fixed;
+  width: 100%;
   height: 95px;
-  background-color: #eee;
 }
 .header .inner {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   max-width: 1440px;
-  margin: 0 20px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-.header .inner h1 {
+.header .inner .main-logo {
+  display: flex;
+  align-items: center;
   height: 95px;
 }
-.header .inner h1 svg {
+.header .inner .main-logo a {
   height: 31px;
+}
+.header .inner .main-logo svg {
+  height: 100%;
+}
+.header .inner .gnb {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+.header .inner .gnb ul {
+  display: flex;
+  align-items: center;
+  height: 95px;
+}
+.header .inner .gnb ul li {
+  padding: 0 15px;
+}
+.header .inner .sub-gnb {
+  display: flex;
+  align-items: center;
+  height: 95px;
+  font-size: 12px;
+}
+.header .inner .sub-gnb ul {
+  display: flex;
+}
+.header .inner .sub-gnb ul a {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+}
+.header .inner .sub-gnb ul a svg {
+  width: 8px;
+  height: 8px;
+  margin-left: 4px;
+}
+.header .inner .sub-gnb .lang button {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  font-family: "NotoSans-Bold";
+  color: #d6d7da;
+}
+.header .inner .sub-gnb .lang button:last-child::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  color: #000;
 }
