@@ -1,0 +1,49 @@
+/* main */
+
+//main-visual
+.main-visual {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    ul {
+        display: flex;
+    }
+    li {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        color: $color-white;
+        .image-wrap {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            top: calc(50% + 40px);
+            left: 50%;
+            height: 275px;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        h3 {
+            font-family: $font-bold;
+            font-size: 24px;
+        }
+        p {
+            font-family: $font-hanna;
+            font-size: 72px;
+        }
+        a {
+            font-family: $font-bold;
+            font-size: 20px;
+        }
+    }
+}

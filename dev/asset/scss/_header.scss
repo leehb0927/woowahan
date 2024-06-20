@@ -1,7 +1,11 @@
 .header {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 95px;
+    background-color: $color-white;
+    z-index: 999;
     .inner {
         display: flex;
         align-items: center;
@@ -48,13 +52,28 @@
                 }
             }
             .lang {
-                position: relative;
                 button {
                     position: relative;
                     width: 36px;
                     height: 36px;
+                    margin-bottom: 2px;
+                    font-size: 12px;
                     font-family: $font-bold;
                     color: $color-gray;
+                    &:disabled {
+                        color: $color-disabled;
+                    }
+                    &.eng {
+                        &::before {
+                            @include vs;
+                            width: 1px;
+                            height: 10px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            left: 0;
+                            background: $color-gray;
+                        }
+                    }
                 }
             }
         }
