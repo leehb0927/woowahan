@@ -48,6 +48,21 @@ $font-hanna: 'BM-Hanna';
     display: flex;
     justify-content: center;
 }
+@mixin ellipsis($line: 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @if $line==1 {
+        white-space: nowrap;
+    }
+    @else {
+        display: -webkit-box;
+        white-space: normal;
+        /*! autoprefixer: off */
+        -webkit-line-clamp: $line;
+        /*! autoprefixer: on */
+        -webkit-box-orient: vertical;
+    }
+}
 
 //color
 $color-gray: #d6d7da;

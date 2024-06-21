@@ -1,5 +1,23 @@
 /* main */
 
+.main {
+    section {
+        .title-wrap {
+            text-align: center;
+        }
+        h3 {
+            font-size: 36px;
+            font-family: $font-bold;
+            line-height: 1.5;
+        }
+        .sub-title {
+            margin-top: 20px;
+            font-size: 16;
+            line-height: 1.75;
+        }
+    }
+}
+
 //main-visual
 .main-visual {
     position: relative;
@@ -46,4 +64,58 @@
             font-size: 20px;
         }
     }
+}
+
+//main-card
+.main-card {
+    padding-top: 160px;
+    .card-wrap {
+        margin-top: 60px;
+        ul {
+            display: flex;
+        }
+        li {
+            position: relative;
+            width: 180px;
+            height: 245px;
+            margin: 0 8px;
+            border-radius: 10px;
+            overflow: hidden;
+            &:nth-child(even) {
+                margin-top: 40px;
+            }
+            &::after {
+                @include vs;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, .5));
+            }
+            .image-wrap {
+                width: 180px;
+                height: 245px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .text {
+                @include ellipsis($line: 2);
+                position: absolute;
+                max-width: 156px;
+                bottom: 16px;
+                left: 12px;
+                font-family: $font-bold;
+                font-size: 16px;
+                line-height: 1.625;
+                color: $color-white;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.main-video {
+    padding-top: 160px;
 }
