@@ -15,6 +15,18 @@
             font-size: 16;
             line-height: 1.75;
         }
+        .button-wrap {
+            width: 100%;
+            text-align: center;
+            .btn-more {
+                height: 52px;
+                padding: 0 22px;
+                border-radius: 8px;
+                font-family: $font-bold;
+                font-size: 16px;
+                line-height: 1.75;
+            }
+        }
     }
 }
 
@@ -198,15 +210,13 @@
 }
 
 .main-news {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 120px 0;
     h3 {
         margin-bottom: 20px;
     }
     .news-wrap {
         max-width: 820px;
+        margin: 0 auto;
         li {
             padding: 40px 20px;
             border-bottom: 1px solid #f3f4f5;
@@ -245,15 +255,11 @@
             }
         }
     }
-    .btn-more {
-        height: 52px;
-        padding: 0 22px;
-        margin-top: 40px;
-        background-color: $color-gray-button;
-        border-radius: 8px;
-        font-family: $font-bold;
-        font-size: 16px;
-        line-height: 1.75;
+    .button-wrap {
+        .btn-more {
+            margin-top: 40px;
+            background-color: $color-gray-button;
+        }
     }
 }
 
@@ -265,10 +271,14 @@
         margin-bottom: 60px;
     }
     .fonts-wrap {
-        ul {}
+        ul {
+            display: flex;
+        }
         li {
+            position: relative;
             width: 176px;
             height: 128px;
+            margin: 0 8px;
             background-color: $color-gray-box;
             border-radius: 8px;
             h4 {
@@ -278,8 +288,19 @@
                 color: $color-gray-text;
             }
             .fonts-img {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
                 img {}
             }
+        }
+    }
+    .button-wrap {
+        .btn-more {
+            margin-top: 60px;
+            background-color: rgba($color-black, .3);
+            color: $color-white;
+            border: 1px solid $color-white;
         }
     }
 }
