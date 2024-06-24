@@ -34,6 +34,16 @@ $font-medium: 'NotoSans-Medium';
 $font-bold: 'NotoSans-Bold';
 $font-hanna: 'BM-Hanna';
 
+.skip {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    margin: -1px;
+
+}
+
 //flex
 @mixin center {
     display: flex;
@@ -66,6 +76,7 @@ $font-hanna: 'BM-Hanna';
 
 //color
 $color-gray: #d6d7da;
+$color-gray-tag: #a6a7a9;
 $color-disabled: #232324;
 $color-white: #fff;
 
