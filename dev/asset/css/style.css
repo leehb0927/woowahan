@@ -431,3 +431,11 @@
   color: #fff;
   border: 1px solid #fff;
 }
+
+footer {
+  padding: 60px 24px 85px;
+  color: #37373a;
+}
+footer .gnb-footer {
+  display: flex;
+}
