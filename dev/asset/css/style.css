@@ -493,8 +493,74 @@ footer .gnb-footer .footer-item-etc li.ccm::before {
 }
 footer .footer-bottom {
   display: flex;
+  justify-content: space-between;
+  align-items: end;
   margin-top: 28px;
+}
+footer .footer-bottom .address h2 {
+  margin-bottom: 8px;
+  font-family: "NotoSans-Bold";
+  line-height: 1.75;
+}
+footer .footer-bottom .address address {
+  display: flex;
+  font-size: 14px;
+  line-height: 1.7;
+}
+footer .footer-bottom .address address i {
+  display: inline-block;
+  margin: 0 4px;
+}
+footer .footer-bottom .related-sites {
+  position: relative;
+  width: 327px;
+}
+footer .footer-bottom .related-sites button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 50px;
+  padding: 13px 16px;
+  background-color: #fff;
+  border: 1px solid #a6a7a9;
+  border-radius: 8px;
+}
+footer .footer-bottom .related-sites button span {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+}
+footer .footer-bottom .related-sites button::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 8px;
+  margin-left: 16px;
+  background-image: url("../img/main/icon_arrow_down.svg");
 }
 footer .footer-bottom .related-sites .sites {
   display: none;
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  max-height: 215px;
+  margin-bottom: 4px;
+  background-color: #fff;
+  border: 1px solid #a6a7a9;
+  border-radius: 8px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.08);
+  overflow-y: scroll;
+  transition: 0.5s;
+}
+footer .footer-bottom .related-sites .sites ul {
+  padding: 0 16px;
+}
+footer .footer-bottom .related-sites .sites ul li {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+footer .footer-bottom .related-sites .sites ul li + li {
+  border-top: 1px solid #f3f4f5;
 }
