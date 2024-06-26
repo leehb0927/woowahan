@@ -1,5 +1,6 @@
-//Swiper slider
-var swiper = new Swiper(".main-visual .swiper", {
+window.onload = function() {
+    //Swiper slider
+    var swiper = new Swiper(".main-visual .swiper", {
         centeredSlides: true,
         loop: true,
         autoplay: {
@@ -15,4 +16,8 @@ var swiper = new Swiper(".main-visual .swiper", {
             prevEl: ".swiper-button-prev",
         },
     }
-);
+    );
+}
+
+//header scroll
+

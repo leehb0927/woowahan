@@ -78,6 +78,9 @@
   position: relative;
   padding: 0 15px;
 }
+.header .inner .gnb ul li:hover {
+  font-weight: bold;
+}
 .header .inner .gnb ul li.music a::after {
   content: "";
   display: inline-block;
@@ -100,6 +103,9 @@
 }
 .header .inner .sub-gnb ul {
   display: flex;
+}
+.header .inner .sub-gnb ul li:hover {
+  font-weight: bold;
 }
 .header .inner .sub-gnb ul a {
   display: flex;
