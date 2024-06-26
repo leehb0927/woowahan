@@ -75,7 +75,22 @@
   height: 95px;
 }
 .header .inner .gnb ul li {
+  position: relative;
   padding: 0 15px;
+}
+.header .inner .gnb ul li.music a::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  content: "BETA";
+  top: -3px;
+  left: 100%;
+  margin-left: -15px;
+  font-family: "NotoSans-Bold";
+  font-size: 10px;
+  color: rgba(35, 35, 36, 0.5);
+  line-height: 1;
+  transform: scale(0.8);
 }
 .header .inner .sub-gnb {
   display: flex;
