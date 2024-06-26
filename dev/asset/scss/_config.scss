@@ -41,7 +41,10 @@ $font-hanna: 'BM-Hanna';
     clip: rect(0 0 0 0);
     overflow: hidden;
     margin: -1px;
+}
 
+.highlight {
+    font-family: $font-bold;
 }
 
 //flex
@@ -88,4 +91,9 @@ $color-black: #000;
     content: '';
     display: inline-block;
     position: absolute;
+}
+
+@mixin vs-ib {
+    content: '';
+    display: inline-block;
 }

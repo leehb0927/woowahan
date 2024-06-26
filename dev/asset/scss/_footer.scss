@@ -1,7 +1,65 @@
 footer {
     padding: 60px 24px 85px;
     color: $color-gray-box;
+    background-color: $color-gray-button;
+    .inner {
+        max-width: 1186px;
+        margin: 0 auto;
+    }
     .gnb-footer {
         display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+        > div {
+            flex: 1;
+        }
+        .footer-item,
+        .footer-item2,
+        .footer-item-etc {
+            strong {
+                display: block;
+                margin-bottom: 8px;
+                font-family: $font-bold;
+                line-height: 1.75;
+            }
+            li {
+                margin-top: 8px;
+                font-size: 14px;
+                color: $color-gray-text;
+                line-height: 1.4;
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+        .footer-item2 {
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-item-etc {
+            li {
+                &.ccm {
+                    position: relative;
+                    display: flex;
+                    align-items: end;
+                    &::before {
+                        @include vs-ib;
+                        width: 24px;
+                        height: 24px;
+                        background-image: url('../img/main/icon_ccm.png');
+                        background-size: contain;
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        display: flex;
+        margin-top: 28px;
+        .related-sites {
+            .sites {
+                display: none;
+            }
+        }
     }
 }
