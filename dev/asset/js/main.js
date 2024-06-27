@@ -17,7 +17,18 @@ window.onload = function() {
         },
     }
     );
-}
 
-//header scroll
+
+    //header scroll
+    var header = document.querySelector('.header');
+    window.onscroll = function() {
+        var winScrollTop = window.pageYOffset;
+
+        if(winScrollTop > 100) {
+            header.classList.add('scroll')
+        }else {
+            header.classList.remove('scroll')
+        }
+    }
+}
 

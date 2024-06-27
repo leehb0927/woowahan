@@ -6,6 +6,10 @@
     height: 95px;
     background-color: $color-white;
     z-index: 999;
+    transition: 1.5s;
+    &.scroll {
+        top: -100%;
+    }
     .inner {
         display: flex;
         align-items: center;
