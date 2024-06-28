@@ -10,6 +10,9 @@
     &.scroll {
         top: -100%;
     }
+    &.header-hover {
+        height: 160px;
+    }
     .inner {
         display: flex;
         align-items: center;

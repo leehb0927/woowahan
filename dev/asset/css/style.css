@@ -49,6 +49,9 @@
 .header.scroll {
   top: -100%;
 }
+.header.header-hover {
+  height: 160px;
+}
 .header .inner {
   display: flex;
   align-items: center;
