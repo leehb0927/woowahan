@@ -1,4 +1,16 @@
 /* main */
+//무한 롤링 animation
+.rolling-wrap {
+    &.original {
+        animation: roller1 50s linear infinite;
+    }
+    &.clone {
+        animation: roller2 50s linear infinite;
+    }
+    &.paused {
+        animation-play-state: paused !important;
+    }
+}
 
 .main {
     section {
@@ -37,6 +49,21 @@
     height: 100vh;
     ul {
         display: flex;
+    }
+    .swiper-pagination {
+        bottom: 45px !important;
+        .swiper-pagination-bullet {
+            background: unset;
+            background-color: rgba($color-white, 0.5);
+            opacity: 1;
+            transition: width .3s ease-in-out;
+            border: 4px;
+            &.swiper-pagination-bullet-active {
+                width: 20px;
+                background-color: rgba($color-white, 1);
+                border-radius: 4px;
+            }
+        }
     }
     li {
         position: relative;
@@ -81,21 +108,39 @@
 //main-card
 .main-card {
     padding-top: 160px;
+    width: 100%;
+    overflow: hidden;
     .card-wrap {
+        display: flex;
         margin-top: 60px;
+        .rolling-wrap {
+            &.original {
+                li {
+                    &:nth-child(even) {
+                        margin-top: 40px;
+                    }
+                }
+            }
+            &.clone {
+                li {
+                    &:nth-child(odd) {
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
         ul {
             display: flex;
         }
         li {
             position: relative;
+            flex-shrink: 0;
             width: 180px;
             height: 245px;
             margin: 0 8px;
             border-radius: 10px;
             overflow: hidden;
-            &:nth-child(even) {
-                margin-top: 40px;
-            }
+            cursor: pointer;
             &::after {
                 @include vs;
                 width: 100%;
@@ -104,12 +149,20 @@
                 left: 0;
                 background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, .5));
             }
+            &:hover {
+                .image-wrap {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
             .image-wrap {
                 width: 180px;
                 height: 245px;
                 img{
                     width: 100%;
                     height: 100%;
+                    transition: .6s;
                 }
             }
             .text {
@@ -138,11 +191,17 @@
         position: relative;
         width: 780px;
         margin: 0 auto;
+        &:hover {
+            .video-btn {
+                display: block;
+            }
+        }
         video {
             width: 100%;
             object-fit: cover;
         }
         .video-btn {
+            display: none;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -150,7 +209,7 @@
             width: 80px;
             height: 80px;
             background-image: url('../img/main/icon_video_stop.svg');
-            
+            cursor: pointer;
         }
     }
 }
@@ -220,6 +279,14 @@
         li {
             padding: 40px 20px;
             border-bottom: 1px solid #f3f4f5;
+            &:hover {
+                background-color: $color-gray-bg;
+                .image-wrap {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
             a {
                 display: flex;
             }
@@ -227,10 +294,12 @@
                 width: 200px;
                 height: 160px;
                 margin-right: 40px;
+                overflow: hidden;
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                    transition: .6s;
                 }
             }
             .text {
@@ -271,11 +340,14 @@
         margin-bottom: 60px;
     }
     .fonts-wrap {
+        width: 100%;
+        overflow: hidden;
         ul {
             display: flex;
         }
         li {
             position: relative;
+            flex-shrink: 0;
             width: 176px;
             height: 128px;
             margin: 0 8px;

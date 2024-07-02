@@ -83,6 +83,7 @@ $color-gray-tag: #a6a7a9;
 $color-gray-button: #f3f4f5;
 $color-gray-box: #37373a;
 $color-gray-text: #6c6d6f;
+$color-gray-bg: #f9f9fa;
 $color-disabled: #232324;
 $color-white: #fff;
 $color-black: #000;
@@ -96,4 +97,17 @@ $color-black: #000;
 @mixin vs-ib {
     content: '';
     display: inline-block;
+}
+
+//animation
+@keyframes roller1 {
+    0% { transform: translateX(0); }
+	50% { transform: translateX(-100%); }
+	50.01% { transform: translateX(100%); }
+	100% { transform: translateX(0); }
+}
+
+@keyframes roller2 {
+    0% { transition: translateX(0); }
+	100% { transform: translateX(-200%); }
 }
