@@ -21,6 +21,7 @@ window.onload = function() {
 
     //header scroll
     var header = document.querySelector('.header');
+    var headerListItems = document.querySelectorAll('.header .gnb li');
 
     window.onscroll = function() {
         var winScrollTop = window.pageYOffset;
@@ -32,25 +33,16 @@ window.onload = function() {
         }
     }
 
-    //무한 롤링
-/*     let roller = document.querySelector('.rolling-wrap');
-    roller.id = 'roller1';
-
-    let clone = roller.cloneNode(true);
-    clone.id = 'roller2';
-    document.querySelector('.roller').appendChild(clone);
-
-    document.querySelector('#roller1').style.left = '0px';
-    document.querySelector('#roller2').style.left = document.querySelector('.rolling-wrap ul').offsetWidth + 'px';
-
-    roller.classList.add('original');
-    clone.classList.add('clone'); */
-//재사용이 안되는 코드라 재사용 가능한 코드로 수정해 보자
+    headerListItems.forEach(function(item) {
+        item.addEventListener('mouseover', function() {
+            header.classList.add('header-hover')
+        })
+        item.addEventListener('mouseout', function() {
+            header.classList.remove('header-hover')
+        })
+    })
 
 
-    // let rollers = document.querySelectorAll('.rolling-wrap');
-    // rollers.id = 'roller1'
-    /* rollers는 querySelectorAll 메서드를 사용하여 선택한 요소들의 NodeList를 반환합니다. NodeList는 배열과 유사한 객체로, 각 요소에 직접 접근할 수는 있지만, NodeList 자체에 속성을 설정할 수는 없습니다. 따라서 rollers.id를 설정하는 것은 불가능합니다. */
 
 
     let rollers = document.querySelectorAll('.rolling-wrap');
@@ -64,10 +56,28 @@ window.onload = function() {
 
         // 부모 요소에 복제된 요소를 추가합니다.
         roller.parentNode.appendChild(clone);
+        
+        document.querySelector('#roller1').style.left = '0px';
+        document.querySelector('#roller2').style.left = document.querySelector('.rolling-wrap ul').offsetWidth + 'px';
 
+        roller.classList.add('original');
+        clone.classList.add('clone');
     })
 
 
+        //section.main-video 동영상 멈춤/재생
+    let video = document.querySelector('.video-wrap video');
+    let videoBtn = document.querySelector('.video-wrap .video-btn');
+
+    videoBtn.addEventListener('click', function() {
+        if (video.paused) {
+            video.play();
+            videoBtn.style.backgroundImage = "url(asset/img/main/icon_video_stop.svg)"
+        } else {
+            video.pause();
+            videoBtn.style.backgroundImage = "url(asset/img/main/icon_video_play.svg)"
+        }
+    })
 
 
 
@@ -93,17 +103,4 @@ window.onload = function() {
     clone.addEventListener('mouseout', handleMouseOut);
 
 
-    //section.main-video 동영상 멈춤/재생
-    let video = document.querySelector('.video-wrap video');
-    let videoBtn = document.querySelector('.video-wrap .video-btn');
-
-    videoBtn.addEventListener('click', function() {
-        if (video.paused) {
-            video.play();
-            videoBtn.style.backgroundImage = "url(asset/img/main/icon_video_stop.svg)"
-        } else {
-            video.pause();
-            videoBtn.style.backgroundImage = "url(asset/img/main/icon_video_play.svg)"
-        }
-    })
 }
