@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import 'base.css';
 @font-face {
   font-family: "NotoSans-Light";
@@ -36,6 +37,16 @@
   font-family: "NotoSans-Bold";
 }
 
+/* @mixin */
+/* 
+반응형 breakpoint
+
+max-width: 1040px
+min-width: 981px 이건 왜?
+max-width: 980px
+max-width: 750px
+max-width: 480px
+*/
 @keyframes roller1 {
   0% {
     transform: translateX(0);
@@ -159,6 +170,11 @@
 }
 .header .inner .sub-gnb ul {
   display: flex;
+}
+@media (max-width: 1040px) {
+  .header .inner .sub-gnb ul {
+    display: none;
+  }
 }
 .header .inner .sub-gnb ul li:hover {
   font-weight: bold;

@@ -93,6 +93,9 @@
             font-size: 12px;
             ul {
                 display: flex;
+                @include pc {
+                    display: none;
+                }
                 li {
                     &:hover {
                         font-weight: bold
