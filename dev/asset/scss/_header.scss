@@ -63,10 +63,12 @@
                 }
             }
             .sub-menu {
+                opacity: 0;
                 position: absolute;
                 width: 100%;
                 top: 95px;
                 left: 0;
+                transition: .3s;
                 ul {
                     @include center;
                     width: 100%;
@@ -74,7 +76,12 @@
                     li {
                         margin: 0 15px;
                         a {
-                            color: $color-gray-text2;
+                            color: $color-gray-sub-menu;
+                            transition: .3s;
+                            &:hover {
+                                font-weight: bold;
+                                color: $color-black;
+                            }
                         }
                     }
                 }

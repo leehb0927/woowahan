@@ -126,10 +126,12 @@
   transform: scale(0.8);
 }
 .header .inner .gnb .sub-menu {
+  opacity: 0;
   position: absolute;
   width: 100%;
   top: 95px;
   left: 0;
+  transition: 0.3s;
 }
 .header .inner .gnb .sub-menu ul {
   display: flex;
@@ -143,6 +145,11 @@
 }
 .header .inner .gnb .sub-menu ul li a {
   color: #d6d7da;
+  transition: 0.3s;
+}
+.header .inner .gnb .sub-menu ul li a:hover {
+  font-weight: bold;
+  color: #000;
 }
 .header .inner .sub-gnb {
   display: flex;

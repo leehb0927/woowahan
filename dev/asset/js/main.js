@@ -22,6 +22,7 @@ window.onload = function() {
     //header scroll
     var header = document.querySelector('.header');
     var headerListItems = document.querySelectorAll('.header .gnb li');
+    var headerSub = document.querySelector('.header .gnb .sub-menu');
 
     window.onscroll = function() {
         var winScrollTop = window.pageYOffset;
@@ -33,15 +34,28 @@ window.onload = function() {
         }
     }
 
-    headerListItems.forEach(function(item) {
-        item.addEventListener('mouseover', function() {
-            header.classList.add('header-hover')
-        })
-        item.addEventListener('mouseout', function() {
-            header.classList.remove('header-hover')
-        })
-    })
+    //header mouseover
+    header.addEventListener('mouseover', function() {
+        //서브메뉴 나타남
+        header.classList.add('header-hover');
+        headerSub.style.opacity = '1';
+    });
 
+    //header mouseout
+    header.addEventListener('mouseout', function(event) {
+        if (!header.contains(event.relatedTarget)) {
+            headerSub.style.opacity = '0';
+
+
+            hoverTimeout = setTimeout(function() {
+                header.classList.remove('header-hover');
+            }, 300)
+        }
+    });
+    /* 
+    header.contains(event.relatedTarget) _ 목표 요소가 'header'요소 내부에 있는지 확인 마우스가 목표 요소 내부에 있는지 확인하는 거 같음
+    _ 앞에 !는 header요소 내부에 없을 경우 true반환하여 함수 실행
+    */
 
 
 
