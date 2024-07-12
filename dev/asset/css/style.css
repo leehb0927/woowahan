@@ -671,11 +671,13 @@ footer .footer-bottom .related-sites button::after {
   height: 8px;
   margin-left: 16px;
   background-image: url("../img/main/icon_arrow_down.svg");
+  transition: 0.3s;
+}
+footer .footer-bottom .related-sites button.open::after {
+  transform: rotate(-180deg);
 }
 footer .footer-bottom .related-sites .sites {
-  display: none;
   position: absolute;
-  bottom: 100%;
   width: 100%;
   max-height: 215px;
   margin-bottom: 4px;
@@ -685,6 +687,8 @@ footer .footer-bottom .related-sites .sites {
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.08);
   overflow-y: scroll;
   transition: 0.5s;
+  bottom: 80%;
+  opacity: 0;
 }
 footer .footer-bottom .related-sites .sites ul {
   padding: 0 16px;
@@ -696,4 +700,8 @@ footer .footer-bottom .related-sites .sites ul li {
 }
 footer .footer-bottom .related-sites .sites ul li + li {
   border-top: 1px solid #f3f4f5;
+}
+footer .footer-bottom .related-sites .sites.open {
+  bottom: 100%;
+  opacity: 1;
 }

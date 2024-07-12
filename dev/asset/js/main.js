@@ -18,6 +18,15 @@ window.onload = function() {
     }
     );
 
+    //footer related-sites 열었다 닫혔다
+    var sitesListButton = document.querySelector('footer .related-sites button');
+    var sitesList = document.querySelector('footer .related-sites .sites');
+
+    sitesListButton.addEventListener('click', function() {
+        sitesListButton.classList.toggle('open');
+        sitesList.classList.toggle('open');
+        console.log('click');
+    })
 
     //header scroll
     var header = document.querySelector('.header');
@@ -115,6 +124,7 @@ window.onload = function() {
     roller.addEventListener('mouseout', handleMouseOut);
     clone.addEventListener('mouseover', handleMouseOver);
     clone.addEventListener('mouseout', handleMouseOut);
+
 
 
 }
