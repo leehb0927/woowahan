@@ -189,7 +189,7 @@
     }
     .video-wrap {
         position: relative;
-        width: 780px;
+        max-width: 780px;
         margin: 0 auto;
         &:hover {
             .video-btn {

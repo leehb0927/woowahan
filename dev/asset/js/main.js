@@ -43,6 +43,32 @@ window.onload = function() {
         }
     }
 
+
+    // function handleScroll() {
+    //     var winScrollTop = window.pageYOffset;
+    
+    //     if (winScrollTop > 100) {
+    //         header.classList.add('scroll');
+    //     } else {
+    //         header.classList.remove('scroll');
+    //     }
+    // }
+    // function checkMediaQuery() {
+    //     var mediaQuery = window.matchMedia('(min-width: 980px)');
+    //     if (mediaQuery.matches) {
+    //         window.addEventListener('scroll', handleScroll);
+    //         handleScroll();
+    //     } else {
+
+    //         window.removeEventListener('scroll', handleScroll);
+    //         header.classList.remove('scroll');
+    //     }
+    // }
+    // checkMediaQuery();
+    // window.addEventListener('resize', checkMediaQuery);
+
+
+
     //header mouseover
     header.addEventListener('mouseover', function() {
         //서브메뉴 나타남
