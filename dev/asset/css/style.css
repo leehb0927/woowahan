@@ -69,6 +69,10 @@ max-width: 480px
     transform: translateX(-200%);
   }
 }
+body.overflow-h {
+  overflow: hidden;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -261,8 +265,18 @@ max-width: 480px
   position: relative;
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
   background-color: #fff;
   z-index: 9999;
+  /* transform: translateX(-100%); */
+}
+.mobile-gnb-wrap::-webkit-scrollbar {
+  width: 5px;
+}
+.mobile-gnb-wrap::-webkit-scrollbar-thumb {
+  background: #d9d9d9; /* 스크롤바 색상 */
+  border-radius: 10px;
 }
 .mobile-gnb-wrap .inner {
   padding: 0 24px;
@@ -283,6 +297,7 @@ max-width: 480px
 .mobile-gnb-wrap .mobile-gnb-top .gnb-close-btn {
   width: 50px;
   height: 50px;
+  margin-right: -20px;
   background-image: url("../img/main/icon_close.svg");
   background-size: 18px 18px;
   background-repeat: no-repeat;
@@ -295,15 +310,41 @@ max-width: 480px
   height: 74px;
   font-family: "NotoSans-Bold";
   font-size: 24px;
+  line-height: 1.75;
 }
 .mobile-gnb-wrap .mobile-gnb > ul > li strong .sub-gnb-btn {
+  position: relative;
   width: 42px;
   height: 42px;
-  background-image: url("../img/main/icon_arrow_down.svg");
-  background-repeat: no-repeat;
-  background-size: 12px 8px;
-  background-position: center;
+  margin-right: -15px;
 }
+.mobile-gnb-wrap .mobile-gnb > ul > li strong .sub-gnb-btn::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 12px;
+  height: 8px;
+  background-image: url("../img/main/icon_arrow_down.svg");
+  transition: 0.3s;
+}
+.mobile-gnb-wrap .mobile-gnb > ul > li .sub-gnb {
+  height: 0;
+  margin-left: 24px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.mobile-gnb-wrap .mobile-gnb > ul > li .sub-gnb li {
+  margin-bottom: 16px;
+  color: #6c6d6f;
+  line-height: 1.75;
+}
+.mobile-gnb-wrap .mobile-gnb > ul > li.active strong .sub-gnb-btn::before {
+  transform: rotate(180deg);
+}
+.mobile-gnb-wrap .mobile-gnb > ul > li.active .sub-gnb {
+  height: auto;
+}
+
 /* main */
 .rolling-wrap.original {
   animation: roller1 50s linear infinite;

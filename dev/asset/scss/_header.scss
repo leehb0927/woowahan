@@ -1,3 +1,10 @@
+//모바일 gnb 열었을 때 body overflow 없애기
+body {
+    &.overflow-h {
+        overflow: hidden;
+    }
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -177,8 +184,18 @@
     position: relative;
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
     background-color: $color-white;
     z-index: 9999;
+    /* transform: translateX(-100%); */
+    &::-webkit-scrollbar {
+        width: 5px;  
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $color-gray-scroll; /* 스크롤바 색상 */
+        border-radius: 10px;
+    }
     .inner {
         padding: 0 24px;
     }
@@ -199,6 +216,7 @@
         .gnb-close-btn {
             width: 50px;
             height: 50px;
+            margin-right: -20px;
 
             background-image: url('../img/main/icon_close.svg');
             background-size: 18px 18px;
@@ -216,18 +234,43 @@
                     height: 74px;
                     font-family: $font-bold;
                     font-size: 24px;
+                    line-height: 1.75;
                     .sub-gnb-btn {
+                        position: relative;
                         width: 42px;
                         height: 42px;
-                        
-                        background-image: url('../img/main/icon_arrow_down.svg');
-                        background-repeat: no-repeat;
-                        background-size: 12px 8px;
-                        background-position: center;
+                        margin-right: -15px;
+                        &::before {
+                            @include vs;
+                            width: 12px;
+                            height: 8px;
+                            background-image: url('../img/main/icon_arrow_down.svg');
+                            transition: .3s;
+                        }
                     }
                 }
                 .sub-gnb {
-                    li {}
+                    height: 0;
+                    margin-left: 24px;
+                    overflow: hidden;
+                    transition: .3s;
+                    li {
+                        margin-bottom: 16px;
+                        color: $color-gray-text;
+                        line-height: 1.75;
+                    }
+                }
+                &.active {
+                    strong {
+                        .sub-gnb-btn {
+                            &::before {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                    .sub-gnb {
+                        height: auto;
+                    }
                 }
             }
         }

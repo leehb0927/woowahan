@@ -43,6 +43,20 @@ window.onload = function() {
         }
     }
 
+    //모바일 gnb
+    var mobilSubGnbOpen = document.querySelectorAll('.sub-gnb-btn');
+
+    mobilSubGnbOpen.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var mobileSubGnb = btn.closest('li');
+            /* 
+            .closet '가장 가까운 상위 요소를 찾는다'
+            */
+
+            mobileSubGnb.classList.toggle('active')
+        })
+    })
+
 
     // function handleScroll() {
     //     var winScrollTop = window.pageYOffset;
