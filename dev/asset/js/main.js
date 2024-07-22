@@ -1,4 +1,6 @@
 window.onload = function() {
+    console.log(typeof jQuery);
+
     //Swiper slider
     var swiper = new Swiper(".main-visual .swiper", {
         centeredSlides: true,
@@ -44,17 +46,36 @@ window.onload = function() {
     }
 
     //모바일 gnb
-    var mobilSubGnbOpen = document.querySelectorAll('.sub-gnb-btn');
+    // var mobilSubGnbOpen = document.querySelectorAll('.sub-gnb-btn');
 
-    mobilSubGnbOpen.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            var mobileSubGnb = btn.closest('li');
-            /* 
-            .closet '가장 가까운 상위 요소를 찾는다'
-            */
+    // mobilSubGnbOpen.forEach(function(btn) {
+    //     btn.addEventListener('click', function() {
+    //         var mobileSubGnb = btn.closest('li');
+    //         /* 
+    //         .closet '가장 가까운 상위 요소를 찾는다'
+    //         */
 
-            mobileSubGnb.classList.toggle('active')
-        })
+    //         mobileSubGnb.classList.toggle('active')
+    //     })
+    // })
+
+    $('.sub-gnb-btn').click(function(e) {
+        e.preventDefault();
+
+        var $li = $(this).closest('li');
+        var $subGnb = $li.find('.sub-gnb');
+
+        // $li.toggleClass('active');
+
+        if($subGnb.css('display') == 'block') {
+            $li.removeClass('active');
+
+            $subGnb.stop(true, true).slideUp(400);
+        }else {
+            $li.addClass('active');
+
+            $subGnb.stop(true, true).slideDown(200);
+        }
     })
 
 
