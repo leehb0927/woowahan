@@ -181,20 +181,27 @@ body {
 }
 
 .mobile-gnb-wrap {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: $color-white;
+    transform: translateX(100%);
     z-index: 9999;
-    /* transform: translateX(-100%); */
+
+    transition: .5s;
     &::-webkit-scrollbar {
         width: 5px;  
     }
     &::-webkit-scrollbar-thumb {
         background: $color-gray-scroll; /* 스크롤바 색상 */
         border-radius: 10px;
+    }
+    &.gnb-open {
+        transform: translateX(0);
     }
     .inner {
         padding: 0 24px;

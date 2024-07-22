@@ -1,5 +1,4 @@
 window.onload = function() {
-    console.log(typeof jQuery);
 
     //Swiper slider
     var swiper = new Swiper(".main-visual .swiper", {
@@ -58,6 +57,28 @@ window.onload = function() {
     //         mobileSubGnb.classList.toggle('active')
     //     })
     // })
+
+    //모바일 gnb 열기 / 닫기
+    var body = document.querySelector('body');
+    var mobileMenu =  document.querySelector('.mobile-gnb-wrap');
+    var mobileMenuName = document.querySelector('.mobile-gnb li');
+    var mobileSubMenu = document.querySelector('.mobile-gnb-wrap .sub-gnb');
+
+    $('.mobile-gnb-btn').click(function(e) {
+        e.preventDefault();
+
+        mobileMenu.classList.add('gnb-open');
+        body.classList.add('overflow-h');
+    })
+
+    $('.mobile-gnb-wrap .gnb-close-btn').click(function(e) {
+        e.preventDefault();
+
+        mobileMenu.classList.remove('gnb-open');
+        body.classList.remove('overflow-h');
+        mobileMenuName.classList.remove('active');
+        mobileSubMenu.style.display = 'none';
+    })
 
     $('.sub-gnb-btn').click(function(e) {
         e.preventDefault();
