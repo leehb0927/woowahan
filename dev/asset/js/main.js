@@ -61,8 +61,7 @@ window.onload = function() {
     //모바일 gnb 열기 / 닫기
     var body = document.querySelector('body');
     var mobileMenu =  document.querySelector('.mobile-gnb-wrap');
-    var mobileMenuName = document.querySelector('.mobile-gnb li');
-    var mobileSubMenu = document.querySelector('.mobile-gnb-wrap .sub-gnb');
+    var mobileMenuName = document.querySelectorAll('.mobile-gnb li');
 
     $('.mobile-gnb-btn').click(function(e) {
         e.preventDefault();
@@ -74,10 +73,15 @@ window.onload = function() {
     $('.mobile-gnb-wrap .gnb-close-btn').click(function(e) {
         e.preventDefault();
 
+        var $subGnb = $('.mobile-gnb-wrap .sub-gnb');
+
         mobileMenu.classList.remove('gnb-open');
         body.classList.remove('overflow-h');
-        mobileMenuName.classList.remove('active');
-        mobileSubMenu.style.display = 'none';
+
+        mobileMenuName.forEach(function(name) {
+            name.classList.remove('active')
+        })
+        $subGnb.slideUp(500);
     })
 
     $('.sub-gnb-btn').click(function(e) {

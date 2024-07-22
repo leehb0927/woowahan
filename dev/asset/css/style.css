@@ -361,6 +361,39 @@ body.overflow-h {
 .mobile-gnb-wrap .mobile-gnb > ul > li.active strong .sub-gnb-btn::before {
   transform: rotate(180deg);
 }
+.mobile-gnb-wrap .mobile-sub-gnb {
+  position: relative;
+  margin-top: 10px;
+  padding-top: 25px;
+  border-top: 1px solid #ebeef2;
+}
+.mobile-gnb-wrap .mobile-sub-gnb div {
+  display: flex;
+}
+.mobile-gnb-wrap .mobile-sub-gnb div a {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  line-height: 44px;
+}
+.mobile-gnb-wrap .mobile-sub-gnb div a:first-child {
+  margin-right: 24px;
+}
+.mobile-gnb-wrap .mobile-sub-gnb div a::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 4px;
+  margin-bottom: 2px;
+  background-image: url("../img/main/icon_arrow_diagonal.svg");
+}
+.mobile-gnb-wrap .mobile-sub-gnb div a.bold {
+  font-family: "NotoSans-Bold";
+}
+.mobile-gnb-wrap .mobile-sub-gnb div a.bold::after {
+  margin-bottom: 0;
+}
 
 /* main */
 .rolling-wrap.original {
