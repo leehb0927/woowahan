@@ -212,10 +212,14 @@ body {
         padding: 0 24px;
     }
     .mobile-gnb-top {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
         height: 63px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        background-color: $color-white;
         .main-logo {
             a {
                 display: inline-block;
@@ -327,6 +331,27 @@ body {
                         margin-bottom: 0;
                     }
                 }
+            }
+        }
+    }
+    .mobile-gnb-bottom {
+        display: flex;
+        justify-content: space-between;
+        margin: 35px 0 23px 0;
+        .menu {
+            font-family: $font-bold;
+            font-size: 14px;
+            color: $color-gray-tag;
+            a {
+                &:last-child {
+                    margin-left: 32px;
+                }
+            }
+        }
+        .lang {
+            @include header-lang;
+            button {
+                font-size: 14px;
             }
         }
     }

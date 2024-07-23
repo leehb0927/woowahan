@@ -69,7 +69,6 @@
         position: relative;
         width: 100%;
         height: 100vh;
-        color: $color-white;
         .image-wrap {
             width: 100%;
             height: 100%;
@@ -90,6 +89,9 @@
             transform: translate(-50%, -50%);
             text-align: center;
         }
+        h3, p, a {
+            color: $color-white;
+        }
         h3 {
             font-family: $font-bold;
             font-size: 24px;
@@ -101,6 +103,9 @@
         a {
             font-family: $font-bold;
             font-size: 20px;
+            span {
+                color: $color-white;
+            }
         }
     }
 }
@@ -174,8 +179,10 @@
                 font-family: $font-bold;
                 font-size: 16px;
                 line-height: 1.625;
-                color: $color-white;
                 z-index: 1;
+                p {
+                    color: $color-white;
+                }
             }
         }
     }
@@ -239,7 +246,6 @@
         width: 100%;
         top: 50%;
         transform: translateY(-50%);
-        color: white;
         text-align: center;
         z-index: 2;
         h3 {
@@ -253,6 +259,7 @@
             font-family: $font-bold;
             font-size: 36px;
             line-height: 1.5;
+            color: $color-white;
         }
         .image-wrap {
             width: 110px;
@@ -264,6 +271,7 @@
             margin: 20px 0;
             font-size: 16px;
             line-height: 1.75;
+            color: $color-white;
         }
     }
 }
