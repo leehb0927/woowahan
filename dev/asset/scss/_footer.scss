@@ -58,7 +58,7 @@ footer {
         justify-content: space-between;
         align-items: end;
         margin-top: 28px;
-        @include mobile2 {
+        @include mobile3 {
             flex-direction: column-reverse;
             align-items: unset;
             margin-top: 40px;
@@ -82,7 +82,7 @@ footer {
         .related-sites {
             position: relative;
             width: 327px;
-            @include mobile2 {
+            @include mobile3 {
                 width: 100%;
                 margin-bottom: 40px;
             }

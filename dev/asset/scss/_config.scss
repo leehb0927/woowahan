@@ -66,6 +66,12 @@ max-width: 480px
 }
 
 @mixin mobile2 {
+    @media (max-width: 534px) {
+        
+    }
+}
+
+@mixin mobile3 {
     @media (max-width: 750px) {
         @content;
     }
