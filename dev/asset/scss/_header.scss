@@ -186,6 +186,7 @@ body {
 }
 
 .mobile-gnb-wrap {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -198,6 +199,10 @@ body {
     z-index: 9999;
 
     transition: .5s;
+
+    @include tablet {
+        display: block;
+    }
     &::-webkit-scrollbar {
         width: 5px;  
     }

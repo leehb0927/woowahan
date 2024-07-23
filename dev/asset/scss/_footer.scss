@@ -4,7 +4,7 @@ footer {
     background-color: $color-gray-button;
     .inner {
         max-width: 1186px;
-        margin: 0 auto;
+        margin: 0 7px;
     }
     .gnb-footer {
         display: flex;
@@ -58,6 +58,11 @@ footer {
         justify-content: space-between;
         align-items: end;
         margin-top: 28px;
+        @include mobile2 {
+            flex-direction: column-reverse;
+            align-items: unset;
+            margin-top: 40px;
+        }
         .address {
             h2 {
                 margin-bottom: 8px;
@@ -77,6 +82,10 @@ footer {
         .related-sites {
             position: relative;
             width: 327px;
+            @include mobile2 {
+                width: 100%;
+                margin-bottom: 40px;
+            }
             button {
                 display: flex;
                 align-items: center;
