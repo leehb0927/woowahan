@@ -16,8 +16,38 @@ window.onload = function() {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+        on: {
+            slideChangeTransitionEnd: function() {
+                var currentSlide = $('.swiper-slide-active');
+                visualTextAnimation(currentSlide);
+            }
+        }
     }
     );
+
+    //메인비주얼 텍스트 한 글자씩 나타나게
+    function visualTextAnimation(slide) {
+        var visualText1 = slide.find('.text p:first-of-type');
+        var visualText2 = slide.find('.text p:nth-of-type(2)');
+
+        visualText1.removeClass('visible');
+        visualText2.css('opacity', 0);
+        visualText2.find('span').css('opacity', 0);
+
+        visualText1.addClass('visible');
+
+        setTimeout(function() {
+            visualText2.css('opacity', 1);
+
+            var spans = visualText2.find('span');
+            spans.each(function(index, element) {
+                setTimeout(function() {
+                    $(element).css('opacity', 1);
+                }, index * 150);
+            });
+        }, 1000);
+    }
+    visualTextAnimation($('.swiper-slide-active'));
 
     //footer related-sites 열었다 닫혔다
     var sitesListButton = document.querySelector('footer .related-sites button');

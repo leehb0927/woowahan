@@ -4,18 +4,21 @@ footer {
     background-color: $color-gray-button;
     .inner {
         max-width: 1186px;
-        margin: 0 7px;
+        margin: 0 auto;
+        padding: 0 7px;
     }
     .gnb-footer {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         margin-top: 8px;
         > div {
-            flex: 1;
+            flex: 1 1 auto;
         }
         .footer-item,
         .footer-item2,
         .footer-item-etc {
+            margin-top: 8px;
             strong {
                 display: block;
                 margin-bottom: 8px;
@@ -73,6 +76,9 @@ footer {
                 display: flex;
                 font-size: 14px;
                 line-height: 1.7;
+                p {
+                    display: inline-block;
+                }
                 i {
                     display: inline-block;
                     margin: 0 4px;

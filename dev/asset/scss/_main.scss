@@ -102,23 +102,57 @@
             top: calc(50% + 40px);
             left: 50%;
             height: 275px;
+            width: 100%;
             transform: translate(-50%, -50%);
             text-align: center;
+            @include mobile3 {
+                height: 50vh;
+                h3 {
+                    font-size: 4vw;
+                }
+                p {
+                    font-size: 11vw;
+                }
+                a {
+                    font-size: 3vw;
+                }
+            }
+            @include mobile2 {
+                height: 35vh;
+            }
         }
         h3, p, a {
             color: $color-white;
         }
         h3 {
             font-family: $font-bold;
-            font-size: 24px;
+            font-size: 20px;
         }
-        p {
+        > div {
             font-family: $font-hanna;
-            font-size: 72px;
+            font-size: 60px;
+            line-height: 1.3;
+            p {
+                &:nth-child(1) {
+                    opacity: 0;
+                    transition: opacity 1s ease-in-out;
+                }
+                &.visible {
+                    opacity: 1;
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                span {
+                    opacity: 0;
+                    color: $color-white;
+                    transition: opacity 0.3s ease-out;
+                }
+            }
         }
         a {
             font-family: $font-bold;
-            font-size: 20px;
+            font-size: 16px;
             span {
                 color: $color-white;
             }
