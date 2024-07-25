@@ -144,6 +144,7 @@ body.overflow-h {
   padding: 0 15px;
 }
 .header .inner .gnb > ul li:hover {
+  /* font-family: $font-bold; */
   font-weight: bold;
 }
 .header .inner .gnb > ul li.music a::after {

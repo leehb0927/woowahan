@@ -26,6 +26,9 @@ window.onload = function() {
     );
 
     //메인비주얼 텍스트 한 글자씩 나타나게
+    /* 
+    css 애니메이션도 추가하여 효과를 더욱 입체적으로 만들 수 있다.
+    */
     function visualTextAnimation(slide) {
         var visualText1 = slide.find('.text p:first-of-type');
         var visualText2 = slide.find('.text p:nth-of-type(2)');
@@ -74,30 +77,25 @@ window.onload = function() {
         }
     }
 
-    //모바일 gnb
-    // var mobilSubGnbOpen = document.querySelectorAll('.sub-gnb-btn');
-
-    // mobilSubGnbOpen.forEach(function(btn) {
-    //     btn.addEventListener('click', function() {
-    //         var mobileSubGnb = btn.closest('li');
-    //         /* 
-    //         .closet '가장 가까운 상위 요소를 찾는다'
-    //         */
-
-    //         mobileSubGnb.classList.toggle('active')
-    //     })
-    // })
 
     //모바일 gnb 열기 / 닫기
     var body = document.querySelector('body');
     var mobileMenu =  document.querySelector('.mobile-gnb-wrap');
     var mobileMenuName = document.querySelectorAll('.mobile-gnb li');
+    var mobileGnbBtn = document.querySelector('.mobile-gnb-btn');
 
-    $('.mobile-gnb-btn').click(function(e) {
+    // $('.mobile-gnb-btn').click(function(e) {
+    //     e.preventDefault();
+
+    //     mobileMenu.classList.add('gnb-open');
+    //     body.classList.add('overflow-h');
+    // })
+
+    mobileGnbBtn.addEventListener('click', function(e) {
         e.preventDefault();
 
         mobileMenu.classList.add('gnb-open');
-        body.classList.add('overflow-h');
+        body.classList.add('overflow-h')
     })
 
     $('.mobile-gnb-wrap .gnb-close-btn').click(function(e) {
@@ -132,31 +130,6 @@ window.onload = function() {
             $subGnb.stop(true, true).slideDown(200);
         }
     })
-
-
-    // function handleScroll() {
-    //     var winScrollTop = window.pageYOffset;
-    
-    //     if (winScrollTop > 100) {
-    //         header.classList.add('scroll');
-    //     } else {
-    //         header.classList.remove('scroll');
-    //     }
-    // }
-    // function checkMediaQuery() {
-    //     var mediaQuery = window.matchMedia('(min-width: 980px)');
-    //     if (mediaQuery.matches) {
-    //         window.addEventListener('scroll', handleScroll);
-    //         handleScroll();
-    //     } else {
-
-    //         window.removeEventListener('scroll', handleScroll);
-    //         header.classList.remove('scroll');
-    //     }
-    // }
-    // checkMediaQuery();
-    // window.addEventListener('resize', checkMediaQuery);
-
 
 
     //header mouseover
@@ -240,7 +213,5 @@ window.onload = function() {
     roller.addEventListener('mouseout', handleMouseOut);
     clone.addEventListener('mouseover', handleMouseOver);
     clone.addEventListener('mouseout', handleMouseOut);
-
-
 
 }

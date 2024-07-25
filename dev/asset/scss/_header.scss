@@ -25,7 +25,6 @@
     }
 }
 
-//모바일 gnb 열었을 때 body overflow 없애기
 body {
     &.overflow-h {
         overflow: hidden;
@@ -88,6 +87,7 @@ body {
                     position: relative;
                     padding: 0 15px;
                     &:hover {
+                        /* font-family: $font-bold; */
                         font-weight: bold;
                     }
                     &.music {
