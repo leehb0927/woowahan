@@ -1,5 +1,38 @@
 window.onload = function() {
 
+
+    fetch('../data/data.json')
+        .then(response => response.json())
+        .then(json => {
+            const items = json;
+
+            let contentHtml = '';
+            items.forEach(item => {
+                contentHtml += `
+                <li class="swiper-slide">
+                        <div class="image-wrap">
+                            <img src=${item.image} alt="">
+                        </div>
+                        <div class="text">
+                            <h3>${item.title}</h3>
+                            <div>
+                                <p class="">${item.paragraph1}}</p>
+                                <p>
+                                    ${item.paragraph2.map(char => '<span>${char}</span>').join('')}
+                                </p>
+                            </div>
+                            <a href="">
+                                <span>회사 소개 ></span>
+                            </a>
+                        </div>
+                    </li>
+                `;
+            })
+
+        });
+
+        $('.slide-wrap').html(contentHtml);
+
     //Swiper slider
     var swiper = new Swiper(".main-visual .swiper", {
         centeredSlides: true,
@@ -83,13 +116,6 @@ window.onload = function() {
     var mobileMenu =  document.querySelector('.mobile-gnb-wrap');
     var mobileMenuName = document.querySelectorAll('.mobile-gnb li');
     var mobileGnbBtn = document.querySelector('.mobile-gnb-btn');
-
-    // $('.mobile-gnb-btn').click(function(e) {
-    //     e.preventDefault();
-
-    //     mobileMenu.classList.add('gnb-open');
-    //     body.classList.add('overflow-h');
-    // })
 
     mobileGnbBtn.addEventListener('click', function(e) {
         e.preventDefault();
