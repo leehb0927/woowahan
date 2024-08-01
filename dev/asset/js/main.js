@@ -1,37 +1,38 @@
 window.onload = function() {
 
 
-    fetch('../data/data.json')
-        .then(response => response.json())
-        .then(json => {
-            const items = json;
+    fetch('./asset/data/data.json')
+    .then((response) => response.json())
+    .then((json) => {
+        items = json;
 
-            let contentHtml = '';
-            items.forEach(item => {
-                contentHtml += `
+        contentHtml = '';
+        items.forEach(item => {
+            contentHtml += `
                 <li class="swiper-slide">
-                        <div class="image-wrap">
-                            <img src=${item.image} alt="">
+                    <div class="image-wrap">
+                        <img src="${item.image}" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>${item.title}</h3>
+                        <div>
+                            <p class="">${item.paragraph1}</p>
+                            <p>
+                                ${item.paragraph2.map(
+                                    char => `<span>${char}</span>`
+                                ).join('')}
+                            </p>
                         </div>
-                        <div class="text">
-                            <h3>${item.title}</h3>
-                            <div>
-                                <p class="">${item.paragraph1}}</p>
-                                <p>
-                                    ${item.paragraph2.map(char => '<span>${char}</span>').join('')}
-                                </p>
-                            </div>
-                            <a href="">
-                                <span>회사 소개 ></span>
-                            </a>
-                        </div>
-                    </li>
-                `;
-            })
-
+                        <a href="">
+                            <span>${item.linkText}</span>
+                        </a>
+                    </div>
+                </li>
+            `
         });
+        $('.main-visual .swiper-wrapper').html(contentHtml);
+    })
 
-        $('.slide-wrap').html(contentHtml);
 
     //Swiper slider
     var swiper = new Swiper(".main-visual .swiper", {

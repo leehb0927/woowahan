@@ -22,7 +22,7 @@
     },
     {
         "title": "우아한형제들이 알고 싶다",
-        "image": "",
+        "image": "../dev/asset/img/main/main_visual_1.jpg",
         "paragraph1": "우리",
         "paragraph2": ["재", "미", "지", "게", "", "일", "해", "요"],
         "linkText": "인재영입 >"
