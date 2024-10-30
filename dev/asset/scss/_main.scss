@@ -260,7 +260,8 @@
             }
         }
         video {
-            /* object-fit: cover가 안 먹고 자꾸 .video-wrap 하단에 여백생김
+            /* object-fit: cover가 안 먹고 자꾸
+            .video-wrap 하단에 여백생김
             video는 기본적으로 inline속성을 가지고 있어 여백이 생기는 것이라 display:block 추가
             */
             display: block;
