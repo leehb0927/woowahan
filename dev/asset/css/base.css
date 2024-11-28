@@ -19,7 +19,8 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font: inherit;
+	/* 기본폰트설정 */
+	font-family: 'NotoSans';
 	vertical-align: baseline;
 	color: #232324;
 }

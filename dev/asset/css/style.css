@@ -119,6 +119,7 @@ body.overflow-h {
   }
 }
 .header .inner .main-logo a {
+  display: block;
   height: 31px;
 }
 @media (max-width: 980px) {
@@ -128,6 +129,7 @@ body.overflow-h {
 }
 .header .inner .main-logo svg {
   height: 100%;
+  vertical-align: top;
 }
 .header .inner .gnb {
   position: absolute;
@@ -143,9 +145,8 @@ body.overflow-h {
   position: relative;
   padding: 0 15px;
 }
-.header .inner .gnb > ul li:hover {
-  /* font-family: $font-bold; */
-  font-weight: bold;
+.header .inner .gnb > ul li a span:hover {
+  font-family: "NotoSans-Bold";
 }
 .header .inner .gnb > ul li.music a::after {
   content: "";
@@ -184,7 +185,7 @@ body.overflow-h {
   transition: 0.3s;
 }
 .header .inner .gnb .sub-menu ul li a:hover {
-  font-weight: bold;
+  font-family: "NotoSans-Bold";
   color: #000;
 }
 .header .inner .sub-gnb {
@@ -201,8 +202,8 @@ body.overflow-h {
     display: none;
   }
 }
-.header .inner .sub-gnb ul li:hover {
-  font-weight: bold;
+.header .inner .sub-gnb ul li:hover a span {
+  font-family: "NotoSans-Bold";
 }
 .header .inner .sub-gnb ul a {
   display: flex;
@@ -507,6 +508,7 @@ body.overflow-h {
   opacity: 1;
   transition: width 0.3s ease-in-out;
   border: 4px;
+  border-radius: 4px;
 }
 .main-visual .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 20px;
@@ -570,6 +572,9 @@ body.overflow-h {
   font-size: 60px;
   line-height: 1.3;
 }
+.main-visual li > div p {
+  font-family: "BM-Hanna";
+}
 .main-visual li > div p:nth-child(1) {
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -581,6 +586,7 @@ body.overflow-h {
   opacity: 0;
 }
 .main-visual li > div p span {
+  font-family: "BM-Hanna";
   opacity: 0;
   color: #fff;
   transition: opacity 0.3s ease-out;

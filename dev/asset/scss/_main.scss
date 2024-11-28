@@ -74,6 +74,7 @@
             opacity: 1;
             transition: width .3s ease-in-out;
             border: 4px;
+            border-radius: 4px;
             &.swiper-pagination-bullet-active {
                 width: 20px;
                 background-color: rgba($color-white, 1);
@@ -133,6 +134,7 @@
             font-size: 60px;
             line-height: 1.3;
             p {
+                font-family: $font-hanna;
                 &:nth-child(1) {
                     opacity: 0;
                     transition: opacity 1s ease-in-out;
@@ -144,6 +146,7 @@
                     opacity: 0;
                 }
                 span {
+                    font-family: $font-hanna;
                     opacity: 0;
                     color: $color-white;
                     transition: opacity 0.3s ease-out;

@@ -67,6 +67,7 @@ body {
                 height: 63px;
             }
             a {
+                display: block;
                 height: 31px;
                 @include tablet {
                     height: 23px;
@@ -74,6 +75,7 @@ body {
             }
             svg {
                 height: 100%;
+                vertical-align: top;
             }
         }
         .gnb {
@@ -86,9 +88,12 @@ body {
                 li {
                     position: relative;
                     padding: 0 15px;
-                    &:hover {
-                        /* font-family: $font-bold; */
-                        font-weight: bold;
+                    a {
+                        span {
+                            &:hover {
+                                font-family: $font-bold;
+                            }
+                        }
                     }
                     &.music {
                         a {
@@ -125,7 +130,7 @@ body {
                             color: $color-gray-sub-menu;
                             transition: .3s;
                             &:hover {
-                                font-weight: bold;
+                                font-family: $font-bold;
                                 color: $color-black;
                             }
                         }
@@ -144,7 +149,11 @@ body {
                 }
                 li {
                     &:hover {
-                        font-weight: bold
+                        a {
+                            span {
+                                font-family: $font-bold
+                            }
+                        }
                     }
                 }
                 a {
