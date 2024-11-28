@@ -51,6 +51,12 @@ window.onload = function() {
             on: {
                 slideChangeTransitionEnd: function() {
                     var currentSlide = $('.swiper-slide-active');
+                    var prevSlide = $('.swiper-slide').not('.swiper-slide-active');
+
+                    //스와이퍼 두 번째 바퀴부터 텍스트가 미리 보이는 현상 제거
+                    prevSlide.find('.text p:first-of-type').removeClass('visible');
+                    prevSlide.find('.text p:nth-of-type(2) span').css('opacity', 0);
+
                     visualTextAnimation(currentSlide);
                 }
             }
@@ -83,7 +89,6 @@ window.onload = function() {
             });
         }, 1000);
     }
-    visualTextAnimation($('.swiper-slide-active'));
 
     //footer related-sites 열었다 닫혔다
     var sitesListButton = document.querySelector('footer .related-sites button');
