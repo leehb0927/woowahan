@@ -350,16 +350,6 @@ body.overflow-h {
   overflow: hidden;
   opacity: 0;
   transition: opacity 0.5s;
-  /* 
-  jQuery에서 slideUp, slideDown이벤트를 적용하려면 초기 상태가 display: none 이어야함
-  근데 slideDown이 되고 살짝 뒤에 텍스트가 나타나 transition을 적용해봄
-
-  display: none상태에서는 요소가 없는 걸로 취급해 transition이 안 먹힘
-  그래서 slideDown될 때 텍스트 서서히 나타나도록 만든 opacity transition이 안 먹힘
-
-  두 상태를 모두 반영하려면 .sub-gnb가 height:0에서 height:auto로 바뀌게 해아함
-  -> 그럼 slideDown, slideUp 이벤트 사용 불가 클래스 추가 제거로 스크립트를 변경해야함
-  */
 }
 .mobile-gnb-wrap .mobile-gnb > ul > li .sub-gnb li {
   margin-bottom: 16px;
@@ -701,7 +691,8 @@ body.overflow-h {
   display: block;
 }
 .main-video .video-wrap video {
-  /* object-fit: cover가 안 먹고 자꾸 .video-wrap 하단에 여백생김
+  /* object-fit: cover가 안 먹고 자꾸
+  .video-wrap 하단에 여백생김
   video는 기본적으로 inline속성을 가지고 있어 여백이 생기는 것이라 display:block 추가
   */
   display: block;

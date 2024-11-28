@@ -55,7 +55,7 @@ window.onload = function() {
 
                     //스와이퍼 두 번째 바퀴부터 텍스트가 미리 보이는 현상 제거
                     prevSlide.find('.text p:first-of-type').removeClass('visible');
-                    prevSlide.find('.text p:nth-of-type(2) span').css('opacity', 0);
+        prevSlide.find('.text p:nth-of-type(2) span').css('opacity', 0);
 
                     visualTextAnimation(currentSlide);
                 }
@@ -71,10 +71,7 @@ window.onload = function() {
     function visualTextAnimation(slide) {
         var visualText1 = slide.find('.text p:first-of-type');
         var visualText2 = slide.find('.text p:nth-of-type(2)');
-
-        visualText1.removeClass('visible');
-        visualText2.css('opacity', 0);
-        visualText2.find('span').css('opacity', 0);
+        //'.text p:nth-of-type(2) span' 으로 하면 하나 하나 제어가 어려움
 
         visualText1.addClass('visible');
 
@@ -82,6 +79,8 @@ window.onload = function() {
             visualText2.css('opacity', 1);
 
             var spans = visualText2.find('span');
+            //find가 여러 요소를 선택하고 그 자체로 배열처럼 동작한다.
+            
             spans.each(function(index, element) {
                 setTimeout(function() {
                     $(element).css('opacity', 1);
