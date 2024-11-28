@@ -22,8 +22,10 @@ footer {
             strong {
                 display: block;
                 margin-bottom: 8px;
-                font-family: $font-bold;
-                line-height: 1.75;
+                a {
+                    font-family: $font-bold;
+                    line-height: 1.75;
+                }
             }
             li {
                 margin-top: 8px;
@@ -70,12 +72,15 @@ footer {
             h2 {
                 margin-bottom: 8px;
                 font-family: $font-bold;
+                font-size: 16px;
                 line-height: 1.75;
+                color: $color-gray-box;
             }
             address {
                 display: flex;
                 font-size: 14px;
                 line-height: 1.7;
+                font-style: unset;
                 p {
                     display: inline-block;
                 }

@@ -967,6 +967,10 @@ footer .gnb-footer .footer-item2 strong,
 footer .gnb-footer .footer-item-etc strong {
   display: block;
   margin-bottom: 8px;
+}
+footer .gnb-footer .footer-item strong a,
+footer .gnb-footer .footer-item2 strong a,
+footer .gnb-footer .footer-item-etc strong a {
   font-family: "NotoSans-Bold";
   line-height: 1.75;
 }
@@ -1016,12 +1020,15 @@ footer .footer-bottom {
 footer .footer-bottom .address h2 {
   margin-bottom: 8px;
   font-family: "NotoSans-Bold";
+  font-size: 16px;
   line-height: 1.75;
+  color: #37373a;
 }
 footer .footer-bottom .address address {
   display: flex;
   font-size: 14px;
   line-height: 1.7;
+  font-style: unset;
 }
 footer .footer-bottom .address address p {
   display: inline-block;
