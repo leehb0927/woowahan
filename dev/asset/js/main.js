@@ -31,33 +31,32 @@ window.onload = function() {
             `
         });
         $('.main-visual .swiper-wrapper').html(contentHtml);
-    })
 
-
-    //Swiper slider
-    var swiper = new Swiper(".main-visual .swiper", {
-        centeredSlides: true,
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        on: {
-            slideChangeTransitionEnd: function() {
-                var currentSlide = $('.swiper-slide-active');
-                visualTextAnimation(currentSlide);
+        //Swiper slider
+        var swiper = new Swiper(".main-visual .swiper", {
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            on: {
+                slideChangeTransitionEnd: function() {
+                    var currentSlide = $('.swiper-slide-active');
+                    visualTextAnimation(currentSlide);
+                }
             }
-        }
-    }
-    );
+        });
+        visualTextAnimation($('.swiper-slide-active'));
+    })
 
     //메인비주얼 텍스트 한 글자씩 나타나게
     /* 
