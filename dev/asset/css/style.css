@@ -439,9 +439,11 @@ body.overflow-h {
 /* main */
 .rolling-wrap.original {
   animation: roller1 50s linear infinite;
+  animation-play-state: running;
 }
 .rolling-wrap.clone {
   animation: roller2 50s linear infinite;
+  animation-play-state: running;
 }
 .rolling-wrap.paused {
   animation-play-state: paused !important;
@@ -667,12 +669,12 @@ body.overflow-h {
   max-width: 156px;
   bottom: 16px;
   left: 12px;
-  font-family: "NotoSans-Bold";
-  font-size: 16px;
-  line-height: 1.625;
   z-index: 1;
 }
 .main-card .card-wrap li .text p {
+  font-family: "NotoSans-Bold";
+  font-size: 16px;
+  line-height: 1.625;
   color: #fff;
 }
 

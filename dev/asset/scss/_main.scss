@@ -3,9 +3,11 @@
 .rolling-wrap {
     &.original {
         animation: roller1 50s linear infinite;
+        animation-play-state: running;
     }
     &.clone {
         animation: roller2 50s linear infinite;
+        animation-play-state: running;
     }
     &.paused {
         animation-play-state: paused !important;
@@ -232,11 +234,11 @@
                 max-width: 156px;
                 bottom: 16px;
                 left: 12px;
-                font-family: $font-bold;
-                font-size: 16px;
-                line-height: 1.625;
                 z-index: 1;
                 p {
+                    font-family: $font-bold;
+                    font-size: 16px;
+                    line-height: 1.625;
                     color: $color-white;
                 }
             }
