@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우아한형제들</title>
+    <link rel="icon" href="../dev/asset/img/common/favicon.ico">
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<!-- mobile gnb 열리면 .overflow-h 클래스 추가 -->
+<body class="">
+    <!-- header에 마우스 올라가면 .header-over 클래스 추가 -->
+    <header class="header">
+        <div class="inner">
+            <h1 class="main-logo">
+                <span class="skip">우아한형제들</span>
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" x="0px" y="0px" style="enable-background:new 0 0 340.2 88.7" viewBox="0 0 340.2 88.7"><path d="M340.2 10.6 334 4.5h-52.7v4.1l-3.5-4.1H225v3.8l-3.5-4.1h-13.9v2.3l-1.5-2h-7.6L194.4 0h-13.9v4.5h-11.7v4.1l-3.5-4.1h-13.9v2l-1.5-2h-7.6L138.1 0h-13.9v4.5h-11.7v4.1l-3.7-4.1H94.9v10.8L84.1 4.5H65.5l-9.4 9.4v3.3L43.3 4.5h-34L0 13.9v20.8l12 11.9H0v13.9l6.2 6.1h13.3v16l6.2 6.1h13.9V66.6H59V53.9l12.8 12.7h18.6l4.7-4.7v20.7l6.2 6.1H115v-4.1l3.7 4.1h52.7v-8.2l-4.9-7.2h6.7l15.6 15.5h29.6l9.4-9.4V67.2l-9.4-9.4-.6-.6h10v-2l1.9 2h11.8l3.8-13.7 2.1 7.6 6.2 6.1h4.8v25.4l6.2 6.1h19.6v-4.1l3.5 4.1h52.7V76.5l-4.1-3.6h4.1V49.3l-3.1-2.4h3.1v-9.8l-3.1-2.8h3.1V22.1l-2.1-1.7h2.1v-9.8h-.2zM208.6 51.7z"/><g fill="#FFF"><path d="m10.1 6.4-8.3 8.3V34l8.3 8.3h32.4l8.3-8.3V14.7l-8.3-8.3H10.1zm30.6 25.7H12V16.6h28.6v15.5h.1zM66.2 6.4l-8.3 8.3v35.7l8.3 8.3h17.1l8.3-8.3V14.7l-8.3-8.3H66.2zm15.2 42.1H68.1V16.6h13.3v31.9zM139.7 58.7l8.3-8.3V24.5l-8.3-8.3h-17.1l-8.3 8.3v25.9l8.3 8.3h17.1zm-15.1-32.3h13.3v22.1h-13.3V26.4zM1.8 58.7h19.5v22.1h10.2V58.7h19.4V48.5H1.8zM148 6.4h-11.7V1.8h-10.2v4.6h-11.8v6.1H148zM107 6.4H96.8v74.4H107V39.9h3.6V29.7H107zM124.6 61.4h-10.3v19.4h49.1V70.6h-38.8zM163.4 6.4h-10.2v52.3h10.2V39.9h3.9V29.7h-3.9zM196 49.5l8.3-8.3V24.5l-8.3-8.3h-17.1l-8.3 8.3v16.7l8.3 8.3H196zm-15.2-23.1h13.3v12.9h-13.3V26.4zM183.3 53.6l-8.3 8.3v10.6l8.3 8.3h28.1l8.3-8.3V61.9l-8.3-8.3h-28.1zm26.2 17h-24.3v-6.8h24.3v6.8zM204.3 6.4h-11.8V1.8h-10.2v4.6h-11.7v6.1h33.7zM209.5 16.2h-2.3v10.2h2.3v5.9h-2.3v10.2h2.3v6.8h10.2V6.1h-10.2zM283.1 32.8h49.1v6.1h-49.1zM283.1 26.4h49.1v-8.6h-38.9v-5.3h38.9V6.4h-49.1zM283.1 80.8h49.1v-8.6h-38.9v-7.3h38.9V45h-49.1v8.6H322v5.2h-38.9zM256.1 12.5V6.4h-29.2v6.1h9l-10.1 36.8h7.9l7.5-27 7.4 27h7.9l-10.1-36.8zM269.8 6.4h6.1v74.4h-6.1z"/><path d="M260 21.9h-4.3v10.2h4.3v48.7h6.1V6.4H260z"/></g></svg>
+                </a>
+            </h1>
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <a href="">
+                            <span>회사소개</span>
+                        </a>
+                        <ul></ul>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>서비스</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>함께가치</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>뉴스룸</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>글꼴</span>
+                        </a>
+                    </li>
+                    <li class="music">
+                        <a href="">
+                            <span>음악</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="sub-menu">
+                    <ul>
+                        <li class="active"><a href="">우아한 문화</a></li>
+                        <li><a href="">히스토리</a></li>
+                        <li><a href="">지속가능경영</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="sub-gnb">
+                <ul class="">
+                    <li>
+                        <a href="">
+                            <span>배민다움</span>
+                            <svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M6.354 0h1v6.5h-1V1.707L.707 7.354 0 6.646 5.646 1H.854V0h5.5z" fill="#232324"></path></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>인재영입</span>
+                            <svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M6.354 0h1v6.5h-1V1.707L.707 7.354 0 6.646 5.646 1H.854V0h5.5z" fill="#232324"></path></svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="lang">
+                    <button disabled>한</button>
+                    <button class="eng">A</button>
+                </div>
+            </div>
+            <button class="mobile-gnb-btn">
+                <span class="skip">메뉴</span>
+            </button>
+        </div>
+    </header>
+    <!-- 오른쪽에서 나타나는 모바일 gnb
+        열렸을 경우 .gnb-open 클래스 추가
+    -->
+    <div class="mobile-gnb-wrap">
+        <div class="inner">
+            <div class="mobile-gnb-top">
+                <h1 class="main-logo">
+                    <span class="skip">우아한형제들</span>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" x="0px" y="0px" style="enable-background:new 0 0 340.2 88.7" viewBox="0 0 340.2 88.7"><path d="M340.2 10.6 334 4.5h-52.7v4.1l-3.5-4.1H225v3.8l-3.5-4.1h-13.9v2.3l-1.5-2h-7.6L194.4 0h-13.9v4.5h-11.7v4.1l-3.5-4.1h-13.9v2l-1.5-2h-7.6L138.1 0h-13.9v4.5h-11.7v4.1l-3.7-4.1H94.9v10.8L84.1 4.5H65.5l-9.4 9.4v3.3L43.3 4.5h-34L0 13.9v20.8l12 11.9H0v13.9l6.2 6.1h13.3v16l6.2 6.1h13.9V66.6H59V53.9l12.8 12.7h18.6l4.7-4.7v20.7l6.2 6.1H115v-4.1l3.7 4.1h52.7v-8.2l-4.9-7.2h6.7l15.6 15.5h29.6l9.4-9.4V67.2l-9.4-9.4-.6-.6h10v-2l1.9 2h11.8l3.8-13.7 2.1 7.6 6.2 6.1h4.8v25.4l6.2 6.1h19.6v-4.1l3.5 4.1h52.7V76.5l-4.1-3.6h4.1V49.3l-3.1-2.4h3.1v-9.8l-3.1-2.8h3.1V22.1l-2.1-1.7h2.1v-9.8h-.2zM208.6 51.7z"/><g fill="#FFF"><path d="m10.1 6.4-8.3 8.3V34l8.3 8.3h32.4l8.3-8.3V14.7l-8.3-8.3H10.1zm30.6 25.7H12V16.6h28.6v15.5h.1zM66.2 6.4l-8.3 8.3v35.7l8.3 8.3h17.1l8.3-8.3V14.7l-8.3-8.3H66.2zm15.2 42.1H68.1V16.6h13.3v31.9zM139.7 58.7l8.3-8.3V24.5l-8.3-8.3h-17.1l-8.3 8.3v25.9l8.3 8.3h17.1zm-15.1-32.3h13.3v22.1h-13.3V26.4zM1.8 58.7h19.5v22.1h10.2V58.7h19.4V48.5H1.8zM148 6.4h-11.7V1.8h-10.2v4.6h-11.8v6.1H148zM107 6.4H96.8v74.4H107V39.9h3.6V29.7H107zM124.6 61.4h-10.3v19.4h49.1V70.6h-38.8zM163.4 6.4h-10.2v52.3h10.2V39.9h3.9V29.7h-3.9zM196 49.5l8.3-8.3V24.5l-8.3-8.3h-17.1l-8.3 8.3v16.7l8.3 8.3H196zm-15.2-23.1h13.3v12.9h-13.3V26.4zM183.3 53.6l-8.3 8.3v10.6l8.3 8.3h28.1l8.3-8.3V61.9l-8.3-8.3h-28.1zm26.2 17h-24.3v-6.8h24.3v6.8zM204.3 6.4h-11.8V1.8h-10.2v4.6h-11.7v6.1h33.7zM209.5 16.2h-2.3v10.2h2.3v5.9h-2.3v10.2h2.3v6.8h10.2V6.1h-10.2zM283.1 32.8h49.1v6.1h-49.1zM283.1 26.4h49.1v-8.6h-38.9v-5.3h38.9V6.4h-49.1zM283.1 80.8h49.1v-8.6h-38.9v-7.3h38.9V45h-49.1v8.6H322v5.2h-38.9zM256.1 12.5V6.4h-29.2v6.1h9l-10.1 36.8h7.9l7.5-27 7.4 27h7.9l-10.1-36.8zM269.8 6.4h6.1v74.4h-6.1z"/><path d="M260 21.9h-4.3v10.2h4.3v48.7h6.1V6.4H260z"/></g></svg>
+                    </a>
+                </h1>
+                <button class="gnb-close-btn">
+                    <span class="skip">메뉴닫기</span>
+                </button>
+            </div>
+            <nav class="mobile-gnb">
+                <ul>
+                    <li class="">
+                        <strong>
+                            <a href=""><span>회사소개</span></a>
+                            <button class="sub-gnb-btn"><span class="skip">서브메뉴열기</span></button>
+                        </strong>
+                        <ul class="sub-gnb">
+                            
+                            <li><a href="">우아한 문화</a></li>
+                            <li><a href="">히스토리</a></li>
+                            <li><a href="">지속가능경영</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>
+                            <a href=""><span>서비스</span></a>
+                            <button class="sub-gnb-btn"><span class="skip">서브메뉴열기</span></button>
+                        </strong>
+                        <ul class="sub-gnb">
+                            <li><a href="">배달/포장</a></li>
+                            <li><a href="">커머스</a></li>
+                            <li><a href="">사장님/라이더</a></li>
+                            <li><a href="">컬쳐</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>
+                            <a href=""><span>함께가치</span></a>
+                            <button class="sub-gnb-btn"><span class="skip">서브메뉴열기</span></button>
+                        </strong>
+                        <ul class="sub-gnb">
+                            <li><a href="">배민그린</a></li>
+                            <li><a href="">배민아카데미</a></li>
+                            <li><a href="">파트너 성장</a></li>
+                            <li><a href="">이웃과 함께</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>
+                            <a href=""><span>뉴스룸</span></a>
+                            <button class="sub-gnb-btn"><span class="skip">서브메뉴열기</span></button>
+                        </strong>
+                        <ul class="sub-gnb">
+                            <li><a href="">알립니다</a></li>
+                            <li><a href="">언론보도</a></li>
+                            <li><a href="">팩트 바로 알기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>
+                            <a href=""><span>글꼴</span></a>
+                        </strong>
+                        <ul class="sub-gnb">
+                            <li><a href=""></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>
+                            <a href=""><span>음악</span></a>
+                        </strong>
+                        <ul class="sub-gnb">
+                            <li><a href=""></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-sub-gnb">
+                <div>
+                    <a href="" class="bold">배민다움</a>
+                    <a href="" class="bold">인재영입</a>
+                </div>
+                <div>
+                    <a href="">우유안부</a>
+                    <a href="">기술 블로그</a>
+                </div>
+                <div>
+                    <a href="">배민닷컴</a>
+                </div>
+            </div>
+            <div class="mobile-gnb-bottom">
+                <div class="menu">
+                    <a href="">공지사항</a>
+                    <a href="">오시는길</a>
+                </div>
+                <div class="lang">
+                    <button disabled>한</button>
+                    <button class="eng">A</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main">
+        <section class="main-visual">
+            <div class="inner swiper">
+                <ul class="slide-wrap swiper-wrapper">
+                    <!-- 스와이퍼 데이터 -->
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="main-card">
+            <div class="title-wrap">
+                <h3>우아한형제들이
+                    <br class="m">
+                    일하는 이야기</h3>
+                <p class="sub-title">평범한 사람들이 모여 비범한 성과를 만들어 내도록</p>
+            </div>
+            <div class="card-wrap roller">
+                <div class="rolling-wrap">
+                    <ul>
+                        <li>
+                            <div class="image-wrap">
+                                <img src="./asset/img/main/main_card.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    여러분은<br/>
+                                    뭐하고 쉬세요?
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image-wrap">
+                                <img src="./asset/img/main/main_card.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    여러분은<br/>
+                                    뭐하고 쉬세요?
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image-wrap">
+                                <img src="./asset/img/main/main_card.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    여러분은<br/>
+                                    뭐하고 쉬세요?
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image-wrap">
+                                <img src="./asset/img/main/main_card.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    여러분은<br/>
+                                    뭐하고 쉬세요?
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image-wrap">
+                                <img src="./asset/img/main/main_card.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    여러분은<br/>
+                                    뭐하고 쉬세요?
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image-wrap">
+                                <img src="./asset/img/main/main_card.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    여러분은<br/>
+                                    뭐하고 쉬세요?
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image-wrap"> 
+                                <img src="./asset/img/main/main_card.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    여러분은<br/>
+                                    뭐하고 쉬세요?
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image-wrap">
+                                <img src="./asset/img/main/main_card.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    여러분은<br/>
+                                    뭐하고 쉬세요?
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image-wrap">
+                                <img src="./asset/img/main/main_card.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <p>
+                                    여러분은<br/>
+                                    뭐하고 쉬세요?
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-video">
+            <div class="title-wrap">
+                <h3>
+                    '문 앞으로 배달되는 <br class="m">일상의 행복'이라는<br class="p">
+                    비전으로
+                </h3>
+                <p class="sub-title">우아한형제들은 배달이 일상을 조금 더 행복하게 하도록 오늘도 달리고 있어요</p>
+            </div>
+            <div class="video-wrap">
+                <video autoplay muted loop playsinline>
+                    <source src="./asset/video/main_service.mp4" type="video/mp4">
+                </video>
+                <button class="video-btn"></button>
+            </div>
+        </section>
+
+        <section class="only-text">
+            <div class="title-wrap">
+                <h3>오늘이<br class="m"> 전설이 될 수 있도록</h3>
+                <p class="sub-title">
+                    세계 진출, 배민로봇 개발, 인공지능을 연구하며<br/>
+                    우아한형제들은 미래를 더 가깝게 만들고 있어요.
+                </p>
+            </div>
+        </section>
+
+        <section class="baemin-green">
+            <div class="background"></div>
+            <div class="text">
+                <h3><span class="skip">배민그린</span></h3>
+                <h4 class="slogan">
+                    잘 먹겠습니다<br/>
+                    잘 버리겠습니다
+                </h4>
+                <div class="image-wrap">
+                    <img src="./asset/img/main/baemin_green_character.png" alt="">
+                </div>
+                <p>
+                    지구에게 건네는 작지만 큰 인사<br/>
+                    배달의민족과 함께 지구에게 인사를 건네 볼까요?
+                </p>
+            </div>
+        </section>
+
+        <section class="main-news">
+            <div class="title-wrap">
+                <h3>
+                    빠르고 정확한<br/>
+                    우아한 형제들의 새소식
+                </h3>
+            </div>
+            <div class="news-wrap">
+                <ul class="news-list">
+                    <li>
+                        <a href="">
+                            <div class="image-wrap">
+                                <img src="./asset/img/main/main-news-img.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <h4 class="title">전문 사진가와 함께 한 메뉴 약 1000개의 기록...배민사진관, 3주년 성과 공개</h4>
+                                <p class="detail">“보기 좋은 메뉴가 시키기도 좋아요”</p>
+                                <p class="date">2024.06.20</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="image-wrap">
+                                <img src="./asset/img/main/main-news-img.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <h4 class="title">전문 사진가와 함께 한 메뉴 약 1000개의 기록...배민사진관, 3주년 성과 공개</h4>
+                                <p class="detail">“보기 좋은 메뉴가 시키기도 좋아요”</p>
+                                <p class="date">2024.06.20</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="button-wrap">
+                <button class="btn-more">더 보기</button>
+            </div>
+        </section>
+
+        <section class="main-fonts">
+            <div class="title-wrap">
+                <h3>배달의민족 <br class="m">글골 찾으세요?</h3>
+                <p class="sub-title">
+                    배달의민족이 만든 모든 글꼴은 무료입니다.<br/>
+                    마음껏 쓰고, 널리 퍼뜨리는 것도 무료!
+                </p>
+            </div>
+            <div class="fonts-wrap roller">
+                <div class="rolling-wrap">
+                    <ul>
+                        <li>
+                            <h4>한나체 Pro</h4>
+                            <div class="fonts-img">
+                                <img src="./asset/img/main/fonts/hanna_pro.svg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <h4>한나체 Pro</h4>
+                            <div class="fonts-img">
+                                <img src="./asset/img/main/fonts/hanna_pro.svg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <h4>한나체 Pro</h4>
+                            <div class="fonts-img">
+                                <img src="./asset/img/main/fonts/hanna_pro.svg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <h4>한나체 Pro</h4>
+                            <div class="fonts-img">
+                                <img src="./asset/img/main/fonts/hanna_pro.svg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <h4>한나체 Pro</h4>
+                            <div class="fonts-img">
+                                <img src="./asset/img/main/fonts/hanna_pro.svg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <h4>한나체 Pro</h4>
+                            <div class="fonts-img">
+                                <img src="./asset/img/main/fonts/hanna_pro.svg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <h4>한나체 Pro</h4>
+                            <div class="fonts-img">
+                                <img src="./asset/img/main/fonts/hanna_pro.svg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <h4>한나체 Pro</h4>
+                            <div class="fonts-img">
+                                <img src="./asset/img/main/fonts/hanna_pro.svg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <h4>한나체 Pro</h4>
+                            <div class="fonts-img">
+                                <img src="./asset/img/main/fonts/hanna_pro.svg" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="button-wrap">
+                <button class="btn-more">더 보기</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="inner">
+            <nav class="gnb-footer">
+                <div class="footer-item">
+                    <strong><a href="">회사소개</a></strong>
+                    <ul>
+                        <li><a href="">우아한 문화</a></li>
+                        <li><a href="">히스토리</a></li>
+                        <li><a href="">지속가능경영</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <strong><a href="">회사소개</a></strong>
+                    <ul>
+                        <li><a href="">우아한 문화</a></li>
+                        <li><a href="">히스토리</a></li>
+                        <li><a href="">지속가능경영</a></li>
+                        <li><a href="">지속가능경영</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <strong><a href="">회사소개</a></strong>
+                    <ul>
+                        <li><a href="">우아한 문화</a></li>
+                        <li><a href="">히스토리</a></li>
+                        <li><a href="">지속가능경영</a></li>
+                        <li><a href="">지속가능경영</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item">
+                    <strong><a href="">회사소개</a></strong>
+                    <ul>
+                        <li><a href="">우아한 문화</a></li>
+                        <li><a href="">히스토리</a></li>
+                        <li><a href="">지속가능경영</a></li>
+                        <li><a href="">지속가능경영</a></li>
+                    </ul>
+                </div>
+                <div class="footer-item2">
+                    <strong><a href="">회사소개</a></strong>
+                    <strong><a href="">음악</a></strong>
+                </div>
+                <div class="footer-item-etc">
+                    <ul>
+                        <li><a href="">오시는 길</a></li>
+                        <li><a href="">공지사항</a></li>
+                        <li class="highlight"><a href="">개인정보처리방침</a></li>
+                        <li><a href="">제휴문의</a></li>
+                        <li class="ccm"><a href="">소비자중심경영</a></li>
+                        <li><a href="">제보센터</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="footer-bottom">
+                <div class="address">
+                    <h2>(주)우아한형제들</h2>
+                    <address>
+                        <p>사업자 등록번호 : 120-87-6576 <span>|</span> 주소 : 서울시 송파구 위례성대로 2 (방이동, 장은빌딩)</p>
+                    </address>
+                </div>
+                <div class="related-sites">
+                    <button><span>관련 사이트</span></button>
+                    <div class="sites">
+                        <ul>
+                            <li><a href=""><span>우유안부</span></a></li>
+                            <li><a href=""><span>우유안부</span></a></li>
+                            <li><a href=""><span>우유안부</span></a></li>
+                            <li><a href=""><span>우유안부</span></a></li>
+                            <li><a href=""><span>우유안부</span></a></li>
+                            <li><a href=""><span>우유안부</span></a></li>
+                            <li><a href=""><span>우유안부</span></a></li>
+                            <li><a href=""><span>우유안부</span></a></li>
+                            <li><a href=""><span>우유안부</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js?v=1.0"></script>
+    <script src="./asset/js/main.js"></script>
+</body>
+</html>

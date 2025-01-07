@@ -1,0 +1,161 @@
+//fonts
+@font-face {
+    font-family: 'NotoSans-Light';
+    src: url('../fonts/NotoSansKR-Light.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'NotoSans';
+    src: url('../fonts/NotoSansKR-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'NotoSans-Medium';
+    src: url('../fonts/NotoSansKR-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'NotoSans-Bold';
+    src: url('../fonts/NotoSansKR-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'BM-Hanna';
+    src: url('../fonts/BMHanna_11yrs_old.otf');
+}
+
+$font-light: 'NotoSans-Light';
+$font-regular: 'NotoSans';
+$font-medium: 'NotoSans-Medium';
+$font-bold: 'NotoSans-Bold';
+$font-hanna: 'BM-Hanna';
+
+.skip {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    margin: -1px;
+}
+
+.highlight {
+    font-family: $font-bold;
+}
+
+/* @mixin */
+
+/* 
+반응형 breakpoint
+
+max-width: 1040px
+min-width: 981px 이건 왜?
+max-width: 980px
+max-width: 750px
+max-width: 480px
+*/
+
+@mixin mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin mobile2 {
+    @media (max-width: 534px) {
+        @content;
+    }
+}
+
+@mixin mobile3 {
+    @media (max-width: 750px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 980px) {
+        @content;
+    }
+}
+
+@mixin pc {
+    @media (max-width: 1040px) {
+        @content;
+    }
+}
+
+
+
+//flex
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-vertical {
+    display: flex;
+    align-items: center;
+}
+@mixin flex-horizontal {
+    display: flex;
+    justify-content: center;
+}
+@mixin ellipsis($line: 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @if $line==1 {
+        white-space: nowrap;
+    }
+    @else {
+        display: -webkit-box;
+        white-space: normal;
+        /*! autoprefixer: off */
+        -webkit-line-clamp: $line;
+        /*! autoprefixer: on */
+        -webkit-box-orient: vertical;
+    }
+}
+
+//color
+$color-gray: #d6d7da;
+$color-gray-tag: #a6a7a9;
+$color-gray-button: #f3f4f5;
+$color-gray-box: #37373a;
+$color-gray-text: #6c6d6f;
+$color-gray-bg: #f9f9fa;
+$color-gray-scroll: #d9d9d9;
+$color-gray-border: #ebeef2;
+$color-disabled: #232324;
+$color-white: #fff;
+$color-black: #000;
+
+$color-gray-sub-menu: #d6d7da;
+
+@mixin vs {
+    content: '';
+    display: inline-block;
+    position: absolute;
+}
+
+@mixin vs-ib {
+    content: '';
+    display: inline-block;
+}
+
+//animation
+@keyframes roller1 {
+    0% { transform: translateX(0); }
+	50% { transform: translateX(-100%); }
+	50.01% { transform: translateX(100%); }
+	100% { transform: translateX(0); }
+}
+
+@keyframes roller2 {
+    0% { transition: translateX(0); }
+	100% { transform: translateX(-200%); }
+}
