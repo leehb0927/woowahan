@@ -584,9 +584,6 @@ body.overflow-h {
 .main-visual li > div p.visible {
   opacity: 1;
 }
-.main-visual li > div p:nth-child(2) {
-  opacity: 0;
-}
 .main-visual li > div p span {
   font-family: "BM-Hanna";
   opacity: 0;

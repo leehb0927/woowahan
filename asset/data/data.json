@@ -3,7 +3,7 @@
         "title": "우아한형제들이 알고 싶다",
         "image": "./asset/img/main/main_visual_1.jpg",
         "paragraph1": "행복도",
-        "paragraph2": ["배", "달", "이", "", "되", "나", "요", "?"],
+        "paragraph2": ["배", "달", "이", "&nbsp;", "되", "나", "요", "?"],
         "linkText": "회사 소개 >"
     },
     {
@@ -17,14 +17,14 @@
         "title": "우아한형제들이 알고 싶다",
         "image": "./asset/img/main/main_visual_1.jpg",
         "paragraph1": "누군가",
-        "paragraph2": ["지", "켜", "보", "고", "", "있", "다", "?"],
+        "paragraph2": ["지", "켜", "보", "고", "&nbsp;", "있", "다", "?"],
         "linkText": "회사 소개 >"
     },
     {
         "title": "우아한형제들이 알고 싶다",
         "image": "./asset/img/main/main_visual_1.jpg",
         "paragraph1": "우리",
-        "paragraph2": ["재", "미", "지", "게", "", "일", "해", "요"],
+        "paragraph2": ["재", "미", "지", "게", "&nbsp;", "일", "해", "요"],
         "linkText": "인재영입 >"
     }
 ]

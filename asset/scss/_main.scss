@@ -144,9 +144,6 @@
                 &.visible {
                     opacity: 1;
                 }
-                &:nth-child(2) {
-                    opacity: 0;
-                }
                 span {
                     font-family: $font-hanna;
                     opacity: 0;

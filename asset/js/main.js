@@ -1,92 +1,94 @@
-window.onload = function() {
 
-    fetch('./asset/data/data.json')
-    .then((response) => response.json())
-    .then((json) => {
-        items = json;
+    //왜 window.onload를 사용했나?
+    //fetch가 비동기 방식이라 데이터를 다 불러온 후 실행되긴 하지만, html구조가 완전히 로드되지 않았을 가능성을 고려해 사용했습니다.
 
-        contentHtml = '';
-        items.forEach(item => {
-            contentHtml += `
-                <li class="swiper-slide">
-                    <div class="image-wrap">
-                        <img src="${item.image}" alt="">
+fetch('./asset/data/data.json')
+.then((response) => response.json())
+.then((json) => {
+    items = json;
+    //json에서 불러온 값을 저장
+
+    contentHtml = '';
+    items.forEach(item => {
+        //
+        contentHtml += `
+            <li class="swiper-slide">
+                <div class="image-wrap">
+                    <img src="${item.image}" alt="">
+                </div>
+                <div class="text">
+                    <h3>${item.title}</h3>
+                    <div>
+                        <p class="">${item.paragraph1}</p>
+                        <p>
+                            ${item.paragraph2.map(
+                                char => `<span>${char}</span>`
+                            ).join('')}
+                        </p>
                     </div>
-                    <div class="text">
-                        <h3>${item.title}</h3>
-                        <div>
-                            <p class="">${item.paragraph1}</p>
-                            <p>
-                                ${item.paragraph2.map(
-                                    char => `<span>${char}</span>`
-                                ).join('')}
-                            </p>
-                        </div>
-                        <a href="">
-                            <span>${item.linkText}</span>
-                        </a>
-                    </div>
-                </li>
-            `
-        });
-        $('.main-visual .swiper-wrapper').html(contentHtml);
+                    <a href="">
+                        <span>${item.linkText}</span>
+                    </a>
+                </div>
+            </li>
+        `
+    });
+    $('.main-visual .swiper-wrapper').html(contentHtml);
 
-        //Swiper slider
-        var swiper = new Swiper(".main-visual .swiper", {
-            centeredSlides: true,
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            on: {
-                slideChangeTransitionEnd: function() {
-                    var currentSlide = $('.swiper-slide-active');
-                    var prevSlide = $('.swiper-slide').not('.swiper-slide-active');
+    //Swiper slider
+    var swiper = new Swiper(".main-visual .swiper", {
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        on: {
+            slideChangeTransitionEnd: function() {
+                var currentSlide = $('.swiper-slide-active');
+                var prevSlide = $('.swiper-slide').not('.swiper-slide-active');
 
-                    //스와이퍼 두 번째 바퀴부터 텍스트가 미리 보이는 현상 제거
-                    prevSlide.find('.text p:first-of-type').removeClass('visible');
-                    prevSlide.find('.text p:nth-of-type(2) span').css('opacity', 0);
+                //스와이퍼 두 번째 바퀴부터 텍스트가 미리 보이는 현상 제거
+                prevSlide.find('.text p:first-of-type').removeClass('visible');
+                prevSlide.find('.text p:nth-of-type(2) span').css('opacity', 0);
 
-                    visualTextAnimation(currentSlide);
-                }
+                visualTextAnimation(currentSlide);
             }
+        }
+    });
+    visualTextAnimation($('.swiper-slide-active'));
+})
+
+//메인비주얼 텍스트 한 글자씩 나타나게
+/* 
+css 애니메이션도 추가하여 효과를 더욱 입체적으로 만들 수 있다.
+*/
+function visualTextAnimation(slide) {
+    var visualText1 = slide.find('.text p:first-of-type');
+    var visualText2 = slide.find('.text p:nth-of-type(2)');
+    //'.text p:nth-of-type(2) span' 으로 하면 하나 하나 제어가 어려움
+
+    visualText1.addClass('visible');
+
+    setTimeout(function() {
+        var spans = visualText2.find('span');
+        //find가 여러 요소를 선택하고 그 자체로 배열처럼 동작한다.
+        
+        spans.each(function(index, element) {
+            setTimeout(function() {
+                $(element).css('opacity', 1);
+            }, index * 150);
         });
-        visualTextAnimation($('.swiper-slide-active'));
-    })
-
-    //메인비주얼 텍스트 한 글자씩 나타나게
-    /* 
-    css 애니메이션도 추가하여 효과를 더욱 입체적으로 만들 수 있다.
-    */
-    function visualTextAnimation(slide) {
-        var visualText1 = slide.find('.text p:first-of-type');
-        var visualText2 = slide.find('.text p:nth-of-type(2)');
-        //'.text p:nth-of-type(2) span' 으로 하면 하나 하나 제어가 어려움
-
-        visualText1.addClass('visible');
-
-        setTimeout(function() {
-            visualText2.css('opacity', 1);
-
-            var spans = visualText2.find('span');
-            //find가 여러 요소를 선택하고 그 자체로 배열처럼 동작한다.
-            
-            spans.each(function(index, element) {
-                setTimeout(function() {
-                    $(element).css('opacity', 1);
-                }, index * 150);
-            });
-        }, 1000);
-    }
+    }, 1000);
+}
 
     //footer related-sites 열었다 닫혔다
     var sitesListButton = document.querySelector('footer .related-sites button');
@@ -219,22 +221,3 @@ window.onload = function() {
             videoBtn.style.backgroundImage = "url(asset/img/main/icon_video_play.svg)"
         }
     })
-
-
-    //마우스 올리면 롤러 멈춤 스크립트
-    rollers.forEach(roller => {
-        let timeOutRoller;
-    
-        roller.addEventListener("mouseenter", function() {
-            timeOutRoller = setTimeout(() => {
-                // 모든 .rolling-wrap 요소에 .paused 클래스 추가
-                document.querySelectorAll('.rolling-wrap').forEach(item => item.classList.add('paused'));
-            }, 3000);
-        });
-    
-        roller.addEventListener("mouseleave", function() {
-            clearTimeout(timeOutRoller);  // 이전에 설정된 타임아웃 취소
-            document.querySelectorAll('.rolling-wrap').forEach(item => item.classList.remove('paused'));
-        });
-    });
-}
